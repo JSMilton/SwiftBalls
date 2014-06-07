@@ -12,6 +12,7 @@
 		4F584B53194352AE00774E0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F584B51194352AE00774E0E /* Main.storyboard */; };
 		4F584B55194352AE00774E0E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F584B54194352AE00774E0E /* Images.xcassets */; };
 		4F584B61194352AE00774E0E /* SwiftBallsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F584B60194352AE00774E0E /* SwiftBallsTests.swift */; };
+		4F584B6B19436BBB00774E0E /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F584B6A19436BBB00774E0E /* Shapes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		4F584B5A194352AE00774E0E /* SwiftBallsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftBallsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F584B5F194352AE00774E0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F584B60194352AE00774E0E /* SwiftBallsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBallsTests.swift; sourceTree = "<group>"; };
+		4F584B6A19436BBB00774E0E /* Shapes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				4F584B4D194352AE00774E0E /* AppDelegate.swift */,
 				4F584B4F194352AE00774E0E /* ViewController.swift */,
+				4F584B6A19436BBB00774E0E /* Shapes.swift */,
 				4F584B51194352AE00774E0E /* Main.storyboard */,
 				4F584B54194352AE00774E0E /* Images.xcassets */,
 				4F584B4B194352AE00774E0E /* Supporting Files */,
@@ -210,6 +213,7 @@
 			files = (
 				4F584B50194352AE00774E0E /* ViewController.swift in Sources */,
 				4F584B4E194352AE00774E0E /* AppDelegate.swift in Sources */,
+				4F584B6B19436BBB00774E0E /* Shapes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
