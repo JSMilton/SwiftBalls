@@ -12,9 +12,13 @@ import Foundation
 
 class ViewController: UIViewController {
     
+    let GRAVITY:CGPoint = CGPoint(x: 0,y: 1)
+    
     var displayLink:CADisplayLink!
     var balls = Ball[]()
                             
+    @IBOutlet var instructionsLabel : UILabel = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         displayLink = CADisplayLink(target: self, selector: "step")
@@ -27,9 +31,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tapGesture(sender : UITapGestureRecognizer) {
-        let newBall = Ball(startPt: sender.locationInView(self.view), size: CGSize(width: 20, height: 20), velocity: CGPoint(x: 5, y: 5), pView: self.view)
+        
+        if (!instructionsLabel.hidden){
+            UIView.animateWithDuration(1.0, animations: {self.instructionsLabel.alpha = 0.0})
+        }
+        
+        let newBall = Ball(startPt: sender.locationInView(self.view), size: CGSize(width: 20, height: 20), force: GRAVITY, pView: self.view)
         self.view.layer.addSublayer(newBall.shapeLayer)
         balls.append(newBall)
+    }
+    
+    @IBAction func clearScreen(sender : AnyObject) {
+        for ball in balls {
+            ball.remove()
+        }
+        
+        balls.removeAll(keepCapacity: false)
     }
     
     func step() {

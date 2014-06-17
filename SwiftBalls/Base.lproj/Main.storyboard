@@ -15,13 +15,36 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="9" preferredMaxLayoutWidth="388" translatesAutoresizingMaskIntoConstraints="NO" id="zkH-gD-kEO">
+                                <rect key="frame" x="46" y="130" width="388" height="220"/>
+                                <string key="text">Tap the screen to add a ball
+
+
+Swipe left or right to clear the screen</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="zkH-gD-kEO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="46" id="3If-dx-9cu"/>
+                            <constraint firstAttribute="centerX" secondItem="zkH-gD-kEO" secondAttribute="centerX" id="BlM-5i-tPq"/>
+                            <constraint firstAttribute="trailing" secondItem="zkH-gD-kEO" secondAttribute="trailing" constant="46" id="Z0m-9Y-wd4"/>
+                            <constraint firstAttribute="centerY" secondItem="zkH-gD-kEO" secondAttribute="centerY" id="qjc-Mq-YVg"/>
+                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Dm0-gT-JGN" appends="YES" id="oCF-un-NlU"/>
+                            <outletCollection property="gestureRecognizers" destination="5id-IJ-De1" appends="YES" id="oer-NU-Bwj"/>
+                            <outletCollection property="gestureRecognizers" destination="JNd-Ga-Gzx" appends="YES" id="kl6-Z3-3BY"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="instructionsLabel" destination="zkH-gD-kEO" id="ikM-X7-bx1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Dm0-gT-JGN">
@@ -29,6 +52,16 @@
                         <action selector="tapGesture:" destination="vXZ-lx-hvc" id="sKO-sz-3BN"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="5id-IJ-De1">
+                    <connections>
+                        <action selector="clearScreen:" destination="vXZ-lx-hvc" id="u1h-m9-4P5"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="JNd-Ga-Gzx">
+                    <connections>
+                        <action selector="clearScreen:" destination="vXZ-lx-hvc" id="gM5-dv-xJ1"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
         </scene>
     </scenes>
